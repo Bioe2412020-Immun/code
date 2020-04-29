@@ -19,8 +19,7 @@ de=0.1;
 dt=5e-9;
 omega=2.042;
 b=1000;
-dxudt= r*xu*(1-(xu+xi/k))-dv*(xu/(hu+xu))...
-    *xv - du*xu*(xe/(he+xe));
+dxudt= r*xu*(1-((xu+xi)/k))-dv*(xu/(hu+xu))*xv - du*xu*(xe/(he+xe));
 dxidt=dv*(xu/(hu+xu))*xv - delta*xi - du*xi*(xe/(he+xe));
 dxmdt= pm*(xv/(hv+xv))*xm*(1-(xm/M));
 dxedt= pe*((xv+xu)/(hv+xv+xu))*xm - de*xe - dt*xu*xe;
