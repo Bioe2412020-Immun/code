@@ -1,0 +1,10 @@
+IC2=[1 200 300 344 345 400];
+figure; hold on
+for i=1:length(IC2)
+    [t, cells]=ode45('tumor1',[0 250],[10^6 0 IC2(i) 0 1]);
+    plot(t,cells(:,1))
+   legend('xm=1','xm=200','xm=300','xm=344','xm=345','xm=400');
+    ylim([0 16000]); xlim([50 250])
+end 
+
+hold off
